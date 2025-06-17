@@ -55,15 +55,15 @@ mod tests {
 
     #[test]
     fn it_should_find_the_similarity_in_example() {
-        let (left, mut right) = example_data();
-        let result = similarity(&left, &mut right);
+        let (left, right) = example_data();
+        let result = similarity(&left, &right);
         assert_eq!(result, 31);
     }
 
     #[test]
     fn it_should_find_the_similarity_in_part2() {
-        let (left, mut right) = read_test_file().unwrap();
-        let result = similarity(&left, &mut right);
+        let (left, right) = read_test_file().unwrap();
+        let result = similarity(&left, &right);
         assert_eq!(result, 23177084);
     }
 
